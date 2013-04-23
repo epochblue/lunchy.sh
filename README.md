@@ -41,6 +41,16 @@ simple commands:
     * edit {pattern}      Edit the launch agent with the specified pattern
 
 
+Install
+-------
+
+To install `lunchy.sh`, clone this repository and link the file to a location
+on your `PATH`. For example:
+
+    git clone git://github.com:epochblue/lunchy.sh.git ; cd lunchy.sh
+    ln -s /path/to/lunchy.sh /usr/local/bin/lunchy
+
+
 License
 -------
 
