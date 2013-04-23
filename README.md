@@ -46,7 +46,7 @@ Install
 
 To install `lunchy.sh`, you can run this from your command line:
 
-    curl -o /usr/local/bin/lunchy https://raw.github.com/epochblue/lunchy.sh/master/lunchy.sh
+    curl -s https://raw.github.com/epochblue/lunchy.sh/master/install.sh | sh
 
 
 License
