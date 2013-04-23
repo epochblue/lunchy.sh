@@ -44,11 +44,9 @@ simple commands:
 Install
 -------
 
-To install `lunchy.sh`, clone this repository and link the file to a location
-on your `PATH`. For example:
+To install `lunchy.sh`, you can run this from your command line:
 
-    git clone git://github.com:epochblue/lunchy.sh.git ; cd lunchy.sh
-    ln -s /path/to/lunchy.sh /usr/local/bin/lunchy
+    curl -o /usr/local/bin/lunchy https://raw.github.com/epochblue/lunchy.sh/master/lunchy.sh
 
 
 License
