@@ -28,6 +28,8 @@ Commands:
     status [pattern]    Display the status of all launch agents, or only the ones matching the pattern.
     install {file}      Make lunchy aware of the given launch agent.
     uninstall {file}    Make lunch unaware of the given launch agent.
+    show {pattern}      See the launch agent with the specified pattern
+    edit {pattern}      Edit the launch agent with the specified pattern
 
 Examples:
     lunchy ls
@@ -148,6 +150,33 @@ status() {
 }
 
 
+#
+# Output the launch agent(s) specified by the given pattern
+#
+show() {
+    pattern=$1
+    if [ -z "$pattern" ]; then
+        echo "Error: missing pattern for launch agent"
+        exit 3
+    fi
+
+    cat `cat $LUNCHY | grep $pattern`
+}
+
+
+#
+# Edit the launch agent(s) specified by the given pattern with $EDITOR
+#
+edit() {
+    pattern=$1
+    if [ -z "$pattern" ]; then
+        echo "Error: missing pattern for launch agent"
+        exit 3
+    fi
+
+    $EDITOR `cat $LUNCHY | grep $pattern`
+}
+
 VERBOSE="0"
 while getopts ":vhV" OPTION
 do
@@ -204,6 +233,14 @@ case $COMMAND in
 
     status)
         status ${PARAMS[0]} 
+        ;;
+
+    show)
+        show ${PARAMS[0]}
+        ;;
+
+    edit)
+        edit ${PARAMS[0]}
         ;;
 
     *)

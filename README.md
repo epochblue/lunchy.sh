@@ -37,6 +37,8 @@ simple commands:
     * status [pattern]    Display the status of all launch agents, or only the ones matching the pattern.
     * install {file}      Make lunchy aware of the given launch agent.
     * uninstall {file}    Make lunch unaware of the given launch agent.
+    * show {pattern}      See the launch agent with the specified pattern
+    * edit {pattern}      Edit the launch agent with the specified pattern
 
 
 License
