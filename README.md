@@ -1,6 +1,8 @@
 lunchy.sh
 =========
 
+**Note: work on lunchy.sh has stopped in favor of [plunchy](https://github.com/epochblue/plunchy)**
+
 `lunchy.sh` is a simple way to interact with OS X's `launchctl`.
 `launchctl` is straight-forward program, but its interface requires you to pass
 it full path information for the agents you're launching. Blech.
